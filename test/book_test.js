@@ -42,10 +42,6 @@ describe('The GDAX order book', () => {
 		// Check that all asks are stored
 		expect(getOrderCount(asks)).to.equal(state.asks.length);
 	});
-	// setState
-	it('should populate the book from the book parameter', () => {
-		
-	});
 	// removeOrder
 	it('should remove an order at the specifed key', () => {
 		// Remove all the orders from the book
@@ -61,4 +57,9 @@ describe('The GDAX order book', () => {
 		// Test that the orders stored by Id are removed
 		expect(Object.keys(book._ordersById).length).to.equal(0);
 	});
+	// getOrder
+	// setState
+	// match
+	// change
+	// _getHash
 });
