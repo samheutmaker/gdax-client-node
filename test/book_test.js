@@ -23,23 +23,8 @@ describe('The GDAX order book', () => {
 		}, {})).length);
 	});
 	it('should remove an order at the specifed key', () => {
-
 		let bids = book._bids;
 		let asks = book._asks;
-		console.log(Object.keys(book._ordersById).length);
-		console.log(asks.length);
-		console.log(bids.length);
-		
 		testOrders.map((order) => order.id || order.order_id).forEach(book.removeOrder.bind(book));
-		bids = book._bids;
-		asks = book._asks;
-
-		console.log(Object.keys(book._ordersById).length);
-		console.log(asks.length);
-		console.log(bids.length);
-
-		// console.log(asks.keys)
-
-		// console.log(bids.keys.length);
 	});
 });
