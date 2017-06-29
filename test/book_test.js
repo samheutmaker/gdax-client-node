@@ -2,8 +2,8 @@ const fs = require('fs');
 const chai = require('chai');
 const expect = chai.expect;
 
-let Book = require('./../lib/book');
-let testOrders = JSON.parse(fs.readFileSync('test/data/order.json'));
+const Book = require('./../lib/book');
+const testOrders = JSON.parse(fs.readFileSync('test/data/order.json'));
 
 let uniqueOrderCount = Object.keys(testOrders.reduce((cur, next) => {
 	cur[next.order_id] = true;
