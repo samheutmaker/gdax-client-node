@@ -1,0 +1,25 @@
+{
+  "name": "eth-bot",
+  "version": "1.0.0",
+  "description": "A HFT GDAX Ether trading bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "PATH=$PATH:Users/samuel/Desktop/Projects/crypto/hft/eth-bot/node_modules/.bin && babel test.js --presets stage-0 > node > out.txt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "samheutmaker@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-stage-0": "^6.24.1",
+    "functional-red-black-tree": "^1.0.1",
+    "gdax": "^0.4.2",
+    "num": "^0.3.0",
+    "ws": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "chai": "^4.0.2",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.4.2"
+  }
+}
