@@ -33,6 +33,6 @@ const publicClient = new PublicClient();
 const PrivateClient = require('./lib/private-client');
 let privateClient = new PrivateClient();
 
-privateClient.getAccounts()
+privateClient.getHolds('11a79671-a959-4039-9bda-0c4ac65d5260')
 .then((r) => console.log(r.body))
 .catch((r) => console.log(r.response.text))
