@@ -31,8 +31,11 @@ const publicClient = new PublicClient();
 
 
 const PrivateClient = require('./lib/private-client');
-let privateClient = new PrivateClient();
+const passphrase = process.env.GDAX_PASSPHRASE;
+const key = process.env.GDAX_KEY;
+const secret = process.env.GDAX_SECRET;
 
-privateClient.getHolds('11a79671-a959-4039-9bda-0c4ac65d5260')
+let privateClient = new PrivateClient(passphrase, key, secret);
+privateClient.getFills({order_id: ''})
 .then((r) => console.log(r.body))
 .catch((r) => console.log(r.response.text))
