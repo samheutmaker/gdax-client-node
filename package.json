@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "PATH=$PATH:Users/samuel/Desktop/Projects/crypto/hft/eth-bot/node_modules/.bin && babel test.js --presets stage-0 > node > out.txt",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "samheutmaker@gmail.com",
   "license": "MIT",
