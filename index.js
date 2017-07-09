@@ -36,6 +36,16 @@ const key = process.env.GDAX_KEY;
 const secret = process.env.GDAX_SECRET;
 
 let privateClient = new PrivateClient(passphrase, key, secret);
-privateClient.getFills({order_id: ''})
+// privateClient.sell({
+// 	type: 'limit',
+// 	price: '250.00',
+// 	size: '0.01',
+// 	product_id: 'ETH-USD'
+// });
+
+// privateClient.cancelAllOrders()
+// .then((r) => console.log(r.body))
+// .catch((r) => console.log(r.response.text))
+privateClient.listOrders()
 .then((r) => console.log(r.body))
 .catch((r) => console.log(r.response.text))
