@@ -34,7 +34,6 @@ const PrivateClient = require('./lib/private-client');
 const passphrase = process.env.GDAX_PASSPHRASE;
 const key = process.env.GDAX_KEY;
 const secret = process.env.GDAX_SECRET;
-
 let privateClient = new PrivateClient(passphrase, key, secret);
 // privateClient.sell({
 // 	type: 'limit',
@@ -42,10 +41,13 @@ let privateClient = new PrivateClient(passphrase, key, secret);
 // 	size: '0.01',
 // 	product_id: 'ETH-USD'
 // });
-
 // privateClient.cancelAllOrders()
 // .then((r) => console.log(r.body))
 // .catch((r) => console.log(r.response.text))
-privateClient.listOrders()
+// privateClient.listOrders()
+// .then((r) => console.log(r.body))
+// .catch((r) => console.log(r.response.text))
+
+privateClient.getTrailingVolume()
 .then((r) => console.log(r.body))
 .catch((r) => console.log(r.response.text))
